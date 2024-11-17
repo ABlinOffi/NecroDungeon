@@ -23,7 +23,6 @@ private:
     void operator=(const GameData&) = delete;
     ~GameData();
 
-    //static GameData* gameData;
     sf::Clock clock;
     float dt;
 };
