@@ -1,4 +1,5 @@
 #include "GameData.h"
+#include "Map.h"
 
 //GameData class
 ///////////////////////////////////////////////////////////////////////////////////
@@ -14,6 +15,8 @@ GameData& GameData::instance()
 
 GameData::~GameData()
 {
+    delete(map);
+    map = nullptr;
 }
 
 void GameData::UpdateTime()
@@ -29,26 +32,28 @@ const float GameData::GetDeltaTime()
 ///////////////////////////////////////////////////////////////////////////////////
 //Game Loop
 ///////////////////////////////////////////////////////////////////////////////////
-void Init()
+void GameData::Init()
 {
-    GameData::instance().window.create(sf::VideoMode(1080, 720), "Necromancer's Dungeon");
+    window.create(sf::VideoMode(1080, 720), "Necromancer's Dungeon");
+    map = new Map(1080, 720, 40);
 }
 
-void Update(const float _dt)
+void GameData::Update()
 {
-
+    UpdateTime();
 }
 
-void Draw(sf::RenderWindow& _window)
+void GameData::Draw()
 {
-    _window.clear();
-    _window.display();
+    window.clear();
+    map->Draw(window);
+    window.display();
 }
 
 int main()
 {
-    Init();
     GameData& gameData = GameData::instance();
+    gameData.Init();
 
     while (gameData.window.isOpen())
     {
@@ -59,8 +64,8 @@ int main()
             if (gameData.event.type == sf::Event::Closed)
                 gameData.window.close();
         }
-        Update(gameData.GetDeltaTime());
-        Draw(gameData.window);
+        gameData.Update();
+        gameData.Draw();
     }
 
     return 0;

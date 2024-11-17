@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
+#include "Definitions.h"
+
+class Map;
 
 class GameData
 {
@@ -15,7 +15,9 @@ public:
     void UpdateTime();
     const float GetDeltaTime();
 
-protected:
+    void Init();
+    void Update();
+    void Draw();
 
 private:
     GameData();
@@ -23,6 +25,7 @@ private:
     void operator=(const GameData&) = delete;
     ~GameData();
 
+    Map* map;
     sf::Clock clock;
     float dt;
 };
