@@ -41,6 +41,8 @@ void GameData::Init()
 void GameData::Update()
 {
     UpdateTime();
+    //if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        //PathFinding::GetMoveArea(map->GetMap(), )
 }
 
 void GameData::Draw()

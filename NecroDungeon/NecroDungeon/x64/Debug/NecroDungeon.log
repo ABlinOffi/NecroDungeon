@@ -1,3 +1,28 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Necromancer'sDungeon.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Map.cpp
+  PathFinding.cpp
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\PathFinding.h(36,2): warning C4091: 'static ': ignored on left of 'PathFinding' when no variable is declared
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\PathFinding.cpp(41,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Tile.cpp
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\PathFinding.h(36,2): warning C4091: 'static ': ignored on left of 'PathFinding' when no variable is declared
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\Tile.cpp(13,45): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\Tile.cpp(13,37): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+  Generating Code...
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\PathFinding.cpp(115): warning C4172: returning address of local variable or temporary: trash
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\PathFinding.cpp(68): warning C4172: returning address of local variable or temporary: trash
   NecroDungeon.vcxproj -> C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\x64\Debug\NecroDungeon.exe

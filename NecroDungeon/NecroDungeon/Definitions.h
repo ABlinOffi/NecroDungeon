@@ -4,3 +4,4 @@
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 #include <stdlib.h>
+#include "PathFinding.h"

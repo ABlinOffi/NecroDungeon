@@ -12,8 +12,10 @@ public:
 
 	void Draw(sf::RenderWindow& _window);
 
+	std::vector<std::vector<Tile*>>& GetMap();
+
 private:
-	std::vector<std::vector<Tile>> tileArray;
+	std::vector<std::vector<Tile*>> tileArray;
 	float height;
 	float width;
 
