@@ -15,6 +15,7 @@ public:
 	bool operator==(Tile);
 
 	const sf::Vector2i& GetPos();
+	void SetColor(sf::Color _color);
 
 protected:
 	sf::Vector2i pos;

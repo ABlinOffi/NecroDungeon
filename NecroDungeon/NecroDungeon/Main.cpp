@@ -1,5 +1,7 @@
 #include "GameData.h"
 #include "Map.h"
+//TODO Remove after debug
+#include "Tile.h"
 
 //GameData class
 ///////////////////////////////////////////////////////////////////////////////////
@@ -41,8 +43,16 @@ void GameData::Init()
 void GameData::Update()
 {
     UpdateTime();
-    //if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-        //PathFinding::GetMoveArea(map->GetMap(), )
+    //Debug
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+    {
+        std::vector<Tile*> moveArea = PathFinding::GetMoveArea(map->GetMap(), *map->GetMap()[6][10], 7);
+        for (int i = 0; i < moveArea.size(); ++i)
+        {
+            moveArea[i]->SetColor(sf::Color::Blue);
+            map->GetMap()[6][10]->SetColor(sf::Color::Red);
+        }
+    }
 }
 
 void GameData::Draw()

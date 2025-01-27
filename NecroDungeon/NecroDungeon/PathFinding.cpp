@@ -79,7 +79,8 @@ std::vector<Tile*>& PathFinding::GetMoveArea(std::vector<std::vector<Tile*>>& _m
         //The "timeout" list of tiles that have a cost
         std::vector<Tile*> costSet;
 
-        openSet.push_back(&_start);
+		openSet = GetNeighbourAtPos(_map, _start.GetPos().x, _start.GetPos().y);
+
         int movesLeft = _moves;
         do
         {
@@ -91,7 +92,7 @@ std::vector<Tile*>& PathFinding::GetMoveArea(std::vector<std::vector<Tile*>>& _m
 
                 for (int j = 0; j < neighbours.size(); ++j)
                 {
-                    //TODO add branch fo obstacles or tile cost
+                    //TODO add branch for obstacles or tile cost
                     {
                         nextSet.push_back(neighbours[j]);
                     }
@@ -123,26 +124,28 @@ int PathFinding::Dist(Tile& _start, Tile& _end)
 std::vector<Tile*>& PathFinding::GetNeighbourAtPos(std::vector<std::vector<Tile*>>& _map, int _currentX, int _currentY)
 {
 	std::vector<Tile*>* neighbours = new std::vector<Tile*>;
+	int idX = _currentX / TILE_SIZE;
+	int idY = _currentY / TILE_SIZE;
 	////////////////////////////////////////////////////////////
 	///List of the neighbouring tiles of the current tile
-	if (_currentX > 0)
+	if (idX > 0)
 	{
-		neighbours->push_back(_map[_currentY][_currentX - 1]);
+		neighbours->push_back(_map[idX - 1][idY]);
 	}
 
-	if (_currentX < _map[0].size() - 1)
+	if (idX < _map.size() - 1)
 	{
-		neighbours->push_back(_map[_currentY][_currentX + 1]);
+		neighbours->push_back(_map[idX + 1][idY]);
 	}
 
-	if (_currentY > 0)
+	if (idY > 0)
 	{
-		neighbours->push_back(_map[_currentY - 1][_currentX]);
+		neighbours->push_back(_map[idX][idY - 1]);
 	}
 
-	if (_currentY < _map.size() - 1)
+	if (idY < _map[0].size() - 1)
 	{
-		neighbours->push_back(_map[_currentY + 1][_currentX]);
+		neighbours->push_back(_map[idX][idY + 1]);
 	}
 	////////////////////////////////////////////////////////////
 

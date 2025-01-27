@@ -36,3 +36,8 @@ const sf::Vector2i& Tile::GetPos()
 {
 	return pos;
 }
+
+void Tile::SetColor(sf::Color _color)
+{
+	shape.setFillColor(_color);
+}
