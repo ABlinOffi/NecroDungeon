@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Definitions.h"
+#include "../Definitions.h"
 
 class Tile;
 
@@ -13,6 +13,7 @@ public:
 	void Draw(sf::RenderWindow& _window);
 
 	std::vector<std::vector<Tile*>>& GetMap();
+	Tile& GetTile(int _x, int _y);
 
 private:
 	std::vector<std::vector<Tile*>> tileArray;

@@ -40,3 +40,8 @@ std::vector<std::vector<Tile*>>& Map::GetMap()
 {
 	return tileArray;
 }
+
+Tile& Map::GetTile(int _x, int _y)
+{
+	return *tileArray[_y][_x];
+}

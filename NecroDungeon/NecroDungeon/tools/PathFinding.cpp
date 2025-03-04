@@ -1,5 +1,5 @@
 #include "PathFinding.h"
-#include "Tile.h"
+#include "../src/Tile.h"
 
 //Sorted Queue for the Pathfinding
 /////////////////////////////////////////////////////////////////////////

@@ -3,6 +3,7 @@
 #include "Definitions.h"
 
 class Map;
+class InputManager;
 
 class GameData
 {

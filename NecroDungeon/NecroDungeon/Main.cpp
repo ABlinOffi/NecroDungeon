@@ -1,7 +1,7 @@
 #include "GameData.h"
-#include "Map.h"
+#include "src/Map.h"
 //TODO Remove after debug
-#include "Tile.h"
+#include "src/Tile.h"
 
 //GameData class
 ///////////////////////////////////////////////////////////////////////////////////
@@ -46,11 +46,11 @@ void GameData::Update()
     //Debug
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
     {
-        std::vector<Tile*> moveArea = PathFinding::GetMoveArea(map->GetMap(), *map->GetMap()[6][10], 7);
+        std::vector<Tile*> moveArea = PathFinding::GetMoveArea(map->GetMap(), map->GetTile(10, 6), 7);
         for (int i = 0; i < moveArea.size(); ++i)
         {
             moveArea[i]->SetColor(sf::Color::Blue);
-            map->GetMap()[6][10]->SetColor(sf::Color::Red);
+            map->GetTile(10, 6).SetColor(sf::Color::Red);
         }
     }
 }

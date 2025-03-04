@@ -16,35 +16,44 @@
     <Filter Include="Fichiers sources\src">
       <UniqueIdentifier>{442266a3-ea1b-47d0-9db7-548597bd8548}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\tools">
+      <UniqueIdentifier>{acf19264-de0a-4f97-9ae2-7de196a89141}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Tile.cpp">
+    <ClCompile Include="src\Tile.cpp">
       <Filter>Fichiers sources\src</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
+    <ClCompile Include="src\Map.cpp">
       <Filter>Fichiers sources\src</Filter>
     </ClCompile>
-    <ClCompile Include="PathFinding.cpp">
+    <ClCompile Include="tools\PathFinding.cpp">
       <Filter>Fichiers sources\src</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\InputManager.cpp">
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameData.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="src\Map.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Definitions.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Tile.h">
+    <ClInclude Include="src\Tile.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="PathFinding.h">
+    <ClInclude Include="tools\PathFinding.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\InputManager.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
