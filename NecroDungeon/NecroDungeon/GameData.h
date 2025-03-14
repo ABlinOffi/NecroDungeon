@@ -20,6 +20,8 @@ public:
     void Update();
     void Draw();
 
+    void UpdateEvent();
+
 private:
     GameData();
     GameData(GameData&) = delete;
@@ -29,4 +31,5 @@ private:
     Map* map;
     sf::Clock clock;
     float dt;
+    InputManager* inputs;
 };

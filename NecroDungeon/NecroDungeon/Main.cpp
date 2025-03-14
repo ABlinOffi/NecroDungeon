@@ -1,7 +1,6 @@
 #include "GameData.h"
 #include "src/Map.h"
-//TODO Remove after debug
-#include "src/Tile.h"
+#include "tools/InputManager.h"
 
 //GameData class
 ///////////////////////////////////////////////////////////////////////////////////
@@ -38,21 +37,12 @@ void GameData::Init()
 {
     window.create(sf::VideoMode(1080, 720), "Necromancer's Dungeon");
     map = new Map(1080, 720, 40);
+    inputs = new InputManager();
 }
 
 void GameData::Update()
 {
     UpdateTime();
-    //Debug
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-    {
-        std::vector<Tile*> moveArea = PathFinding::GetMoveArea(map->GetMap(), map->GetTile(10, 6), 7);
-        for (int i = 0; i < moveArea.size(); ++i)
-        {
-            moveArea[i]->SetColor(sf::Color::Blue);
-            map->GetTile(10, 6).SetColor(sf::Color::Red);
-        }
-    }
 }
 
 void GameData::Draw()
@@ -62,6 +52,16 @@ void GameData::Draw()
     window.display();
 }
 
+void GameData::UpdateEvent()
+{
+    while (window.pollEvent(event))
+    {
+        if (event.type == sf::Event::Closed)
+            window.close();
+        inputs->LeftClick(event, window, map);
+    }
+}
+
 int main()
 {
     GameData& gameData = GameData::instance();
@@ -69,13 +69,7 @@ int main()
 
     while (gameData.window.isOpen())
     {
-        
-        
-        while (gameData.window.pollEvent(gameData.event))
-        {
-            if (gameData.event.type == sf::Event::Closed)
-                gameData.window.close();
-        }
+        gameData.UpdateEvent();
         gameData.Update();
         gameData.Draw();
     }

@@ -45,3 +45,17 @@ Tile& Map::GetTile(int _x, int _y)
 {
 	return *tileArray[_y][_x];
 }
+
+void Map::TileClicked(sf::Vector2i _mousePos)
+{
+	for (int i = 0; i < tileArray.size(); ++i)
+	{
+		for (int j = 0; j < tileArray[i].size(); ++j)
+		{
+			if (tileArray[i][j]->IsCursorInside(_mousePos))
+			{
+				tileArray[i][j]->SetColor(sf::Color::Red);
+			}
+		}
+	}
+}

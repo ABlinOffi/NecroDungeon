@@ -41,3 +41,21 @@ void Tile::SetColor(sf::Color _color)
 {
 	shape.setFillColor(_color);
 }
+
+bool Tile::IsCursorInside(sf::Vector2i _mousePos)
+{
+	int startX = pos.x - size / 2;
+	int startY = pos.y - size / 2;
+
+	if (_mousePos.x < startX || _mousePos.x > startX + size)
+	{
+		return false;
+	}
+
+	if (_mousePos.y < startY || _mousePos.y > startY + size)
+	{
+		return false;
+	}
+
+	return true;
+}

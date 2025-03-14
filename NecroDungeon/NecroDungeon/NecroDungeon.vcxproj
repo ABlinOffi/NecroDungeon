@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="interfaces\IInteractable.h" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="tools\InputManager.cpp" />

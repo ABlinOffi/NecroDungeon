@@ -12,7 +12,8 @@ public:
 	InputManager(InputManager& _cpy);
 	~InputManager();
 
-	Tile& GetTileAtCursor(Map* _map);
+	void LeftClick(sf::Event& _event, sf::RenderWindow& _window);
+	void LeftClick(sf::Event& _event, sf::RenderWindow& _window, Map* _map);
 
 private:
 

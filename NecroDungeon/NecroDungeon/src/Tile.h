@@ -1,8 +1,9 @@
 #pragma once
 
 #include "../Definitions.h"
+#include "../interfaces/IInteractable.h"
 
-class Tile
+class Tile : IInteractable
 {
 public:
 	Tile() = default;
@@ -16,6 +17,9 @@ public:
 
 	const sf::Vector2i& GetPos();
 	void SetColor(sf::Color _color);
+
+	//interfaces method
+	bool IsCursorInside(sf::Vector2i _mousePos) override;
 
 protected:
 	sf::Vector2i pos;
