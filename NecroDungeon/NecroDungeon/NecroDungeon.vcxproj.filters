@@ -33,7 +33,7 @@
     <ClCompile Include="tools\PathFinding.cpp">
       <Filter>Fichiers sources\src</Filter>
     </ClCompile>
-    <ClCompile Include="tools\InputManager.cpp">
+    <ClCompile Include="managers\InputManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="interfaces\IInteractable.h">
@@ -56,7 +56,7 @@
     <ClInclude Include="tools\PathFinding.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="tools\InputManager.h">
+    <ClInclude Include="managers\InputManager.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

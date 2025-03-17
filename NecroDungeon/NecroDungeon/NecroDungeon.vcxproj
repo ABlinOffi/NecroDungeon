@@ -143,7 +143,7 @@
     <ClCompile Include="interfaces\IInteractable.h" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\Map.cpp" />
-    <ClCompile Include="tools\InputManager.cpp" />
+    <ClCompile Include="managers\InputManager.cpp" />
     <ClCompile Include="tools\PathFinding.cpp" />
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
@@ -151,7 +151,7 @@
     <ClInclude Include="Definitions.h" />
     <ClInclude Include="GameData.h" />
     <ClInclude Include="src\Map.h" />
-    <ClInclude Include="tools\InputManager.h" />
+    <ClInclude Include="managers\InputManager.h" />
     <ClInclude Include="tools\PathFinding.h" />
     <ClInclude Include="src\Tile.h" />
   </ItemGroup>

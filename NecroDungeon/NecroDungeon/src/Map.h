@@ -15,6 +15,8 @@ public:
 	std::vector<std::vector<Tile*>>& GetMap();
 	Tile& GetTile(int _x, int _y);
 	void TileClicked(sf::Vector2i _mousePos);
+	void CleanMap();
+	void SetToWalkable(std::vector<Tile*>& _tiles);
 
 private:
 	std::vector<std::vector<Tile*>> tileArray;

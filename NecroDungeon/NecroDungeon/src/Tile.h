@@ -18,7 +18,7 @@ public:
 	const sf::Vector2i& GetPos();
 	void SetColor(sf::Color _color);
 
-	//interfaces method
+	//interface methods
 	bool IsCursorInside(sf::Vector2i _mousePos) override;
 
 protected:

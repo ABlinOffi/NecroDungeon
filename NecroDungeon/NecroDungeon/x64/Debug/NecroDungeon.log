@@ -1,4 +1,20 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Necromancer'sDungeon.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Main.cpp
-C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.h(36,2): warning C4091: 'static ': ignored on left of 'PathFinding' when no variable is declared
+  Map.cpp
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.h(35,2): warning C4091: 'static ': ignored on left of 'PathFinding' when no variable is declared
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\src\Map.cpp(15,88): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\src\Map.cpp(15,57): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  PathFinding.cpp
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.h(35,2): warning C4091: 'static ': ignored on left of 'PathFinding' when no variable is declared
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.cpp(41,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.cpp(68): warning C4172: returning address of local variable or temporary: trash
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.cpp(118): warning C4172: returning address of local variable or temporary: trash
   NecroDungeon.vcxproj -> C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\x64\Debug\NecroDungeon.exe

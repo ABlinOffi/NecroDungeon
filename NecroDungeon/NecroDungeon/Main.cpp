@@ -1,6 +1,6 @@
 #include "GameData.h"
 #include "src/Map.h"
-#include "tools/InputManager.h"
+#include "managers/InputManager.h"
 
 //GameData class
 ///////////////////////////////////////////////////////////////////////////////////
