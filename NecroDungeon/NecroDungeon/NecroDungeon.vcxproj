@@ -152,6 +152,7 @@
     <ClInclude Include="GameData.h" />
     <ClInclude Include="src\Map.h" />
     <ClInclude Include="managers\InputManager.h" />
+    <ClInclude Include="src\units\Units.h" />
     <ClInclude Include="tools\PathFinding.h" />
     <ClInclude Include="src\Tile.h" />
   </ItemGroup>
