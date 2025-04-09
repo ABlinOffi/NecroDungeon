@@ -1,6 +1,8 @@
 C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\interfaces\IInteractable.h;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\IInteractable.obj
 C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\Main.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\Main.obj
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\managers\CombatManager.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\CombatManager.obj
 C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\src\Map.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\Map.obj
 C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\managers\InputManager.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\InputManager.obj
+C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\src\Units.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\Units.obj
 C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\tools\PathFinding.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\PathFinding.obj
 C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\src\Tile.cpp;C:\Users\arthu\Desktop\Travail\Perso\NecroDungeon\NecroDungeon\NecroDungeon\x64\Debug\Tile.obj

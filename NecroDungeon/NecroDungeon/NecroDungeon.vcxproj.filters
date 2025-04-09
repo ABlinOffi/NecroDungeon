@@ -39,6 +39,12 @@
     <ClCompile Include="interfaces\IInteractable.h">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="src\Units.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="managers\CombatManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameData.h">
@@ -59,7 +65,10 @@
     <ClInclude Include="managers\InputManager.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\units\Units.h">
+    <ClInclude Include="src\Units.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="managers\CombatManager.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

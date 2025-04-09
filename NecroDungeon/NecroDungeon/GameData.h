@@ -4,6 +4,7 @@
 
 class Map;
 class InputManager;
+class CombatManager;
 
 class GameData
 {
@@ -32,4 +33,5 @@ private:
     sf::Clock clock;
     float dt;
     InputManager* inputs;
+    CombatManager* combatManager;
 };

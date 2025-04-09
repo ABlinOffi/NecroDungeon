@@ -142,17 +142,20 @@
   <ItemGroup>
     <ClCompile Include="interfaces\IInteractable.h" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="managers\CombatManager.cpp" />
     <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="managers\InputManager.cpp" />
+    <ClCompile Include="src\Units.cpp" />
     <ClCompile Include="tools\PathFinding.cpp" />
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Definitions.h" />
     <ClInclude Include="GameData.h" />
+    <ClInclude Include="managers\CombatManager.h" />
     <ClInclude Include="src\Map.h" />
     <ClInclude Include="managers\InputManager.h" />
-    <ClInclude Include="src\units\Units.h" />
+    <ClInclude Include="src\Units.h" />
     <ClInclude Include="tools\PathFinding.h" />
     <ClInclude Include="src\Tile.h" />
   </ItemGroup>
