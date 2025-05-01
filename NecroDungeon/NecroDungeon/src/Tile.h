@@ -3,6 +3,8 @@
 #include "../Definitions.h"
 #include "../interfaces/IInteractable.h"
 
+class Unit;
+
 class Tile : IInteractable
 {
 public:
@@ -17,13 +19,15 @@ public:
 
 	const sf::Vector2i& GetPos();
 	void SetColor(sf::Color _color);
-
+	void SetUnit(Unit* _unit);
+	Unit* GetUnitOnTile();
 	//interface methods
 	bool IsCursorInside(sf::Vector2i _mousePos) override;
 
-protected:
+private:
 	sf::Vector2i pos;
 	float size;
 	sf::RectangleShape shape;
+	Unit* unit;
 
 };

@@ -64,14 +64,16 @@ void Map::TileClicked(sf::Vector2i _mousePos)
 
 	if (clickedTile != nullptr)
 	{
-		//TODO : Flag the tile to know if we can do something with it
-		std::vector<Tile*>* temp = PathFinding::GetMoveArea(tileArray, **clickedTile, 5);
-		SetToWalkable(*temp);
-		delete(temp);
-		(*clickedTile)->SetColor(sf::Color::Red);
-		clickedTile = nullptr;
-		delete(clickedTile);
+		if ((*clickedTile)->GetUnitOnTile() != nullptr)
+		{
+			std::vector<Tile*>* temp = PathFinding::GetMoveArea(tileArray, **clickedTile);
+			SetToWalkable(*temp);
+			delete(temp);
+		}
 	}
+
+	clickedTile = nullptr;
+	delete(clickedTile);
 }
 
 void Map::CleanMap()
@@ -80,7 +82,8 @@ void Map::CleanMap()
 	{
 		for (int j = 0; j < tileArray[i].size(); ++j)
 		{
-			tileArray[i][j]->SetColor(sf::Color::Green);
+			if (tileArray[i][j]->GetUnitOnTile() == nullptr)
+				tileArray[i][j]->SetColor(sf::Color::Green);
 		}
 	}
 }
@@ -91,4 +94,9 @@ void Map::SetToWalkable(std::vector<Tile*>& _tiles)
 	{
 		_tiles[i]->SetColor(sf::Color::Blue);
 	}
+}
+
+void Map::InsertUnitAtPos(int _x, int _y, Unit* _unit)
+{
+	tileArray[_y][_x]->SetUnit(_unit);
 }

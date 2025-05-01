@@ -7,6 +7,7 @@ Unit::Unit(int _maxHealth, int _attack, int _movement, int _range)
 	stats.push_back(_attack);
 	stats.push_back(_movement);
 	stats.push_back(_range);
+	color = sf::Color::Red;
 }
 
 Unit::Unit(Unit& _cpy)
@@ -30,6 +31,11 @@ Unit::~Unit()
 std::string Unit::GetName()
 {
 	return name;
+}
+
+sf::Color Unit::GetColor()
+{
+	return color;
 }
 
 float Unit::GetStat(UnitStat _stat)

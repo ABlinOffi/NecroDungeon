@@ -1,9 +1,11 @@
 #include "Tile.h"
+#include "Units.h"
 
 Tile::Tile(sf::Vector2i _pos, float _size, sf::Color _color)
 {
 	this->pos = _pos;
 	this->size = _size;
+	this->unit = nullptr;
 
 	shape.setFillColor(_color);
 	shape.setSize(sf::Vector2f(size, size));
@@ -40,6 +42,17 @@ const sf::Vector2i& Tile::GetPos()
 void Tile::SetColor(sf::Color _color)
 {
 	shape.setFillColor(_color);
+}
+
+void Tile::SetUnit(Unit* _unit)
+{
+	this->unit = _unit;
+	SetColor(_unit->GetColor());
+}
+
+Unit* Tile::GetUnitOnTile()
+{
+	return unit;
 }
 
 bool Tile::IsCursorInside(sf::Vector2i _mousePos)

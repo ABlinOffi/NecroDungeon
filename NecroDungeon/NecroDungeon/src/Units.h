@@ -20,12 +20,14 @@ public:
 	~Unit();
 
 	std::string GetName();
+	sf::Color GetColor();
 	float GetStat(UnitStat _stat);
 	void ApplyDamage(float _dmg);
 
-protected:
+private:
 	std::string name;
 	std::vector<float> stats;
 	bool isAlive = true;
+	sf::Color color;
 
 };

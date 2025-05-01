@@ -1,6 +1,7 @@
 #include "GameData.h"
 #include "src/Map.h"
 #include "managers/InputManager.h"
+#include "src/Units.h"
 
 //GameData class
 ///////////////////////////////////////////////////////////////////////////////////
@@ -38,6 +39,8 @@ void GameData::Init()
     window.create(sf::VideoMode(1080, 720), "Necromancer's Dungeon");
     map = new Map(1080, 720, 40);
     inputs = new InputManager();
+    unit = new Unit(0, 0, 5, 0);
+    map->InsertUnitAtPos(8, 8, unit);
 }
 
 void GameData::Update()

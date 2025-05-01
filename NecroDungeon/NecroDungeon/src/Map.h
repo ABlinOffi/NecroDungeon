@@ -3,6 +3,7 @@
 #include "../Definitions.h"
 
 class Tile;
+class Unit;
 
 class Map
 {
@@ -17,6 +18,7 @@ public:
 	void TileClicked(sf::Vector2i _mousePos);
 	void CleanMap();
 	void SetToWalkable(std::vector<Tile*>& _tiles);
+	void InsertUnitAtPos(int _x, int _y, Unit* unit);
 
 private:
 	std::vector<std::vector<Tile*>> tileArray;

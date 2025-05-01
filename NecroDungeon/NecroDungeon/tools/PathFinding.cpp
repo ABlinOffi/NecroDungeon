@@ -1,5 +1,6 @@
 #include "PathFinding.h"
 #include "../src/Tile.h"
+#include "../src/Units.h"
 
 //Sorted Queue for the Pathfinding
 /////////////////////////////////////////////////////////////////////////
@@ -68,7 +69,7 @@ std::vector<Tile*>* PathFinding::GetPath(std::vector<std::vector<Tile*>>& _map, 
 	return &trash;
 }
 
-std::vector<Tile*>* PathFinding::GetMoveArea(std::vector<std::vector<Tile*>>& _map, Tile& _start, int _moves)
+std::vector<Tile*>* PathFinding::GetMoveArea(std::vector<std::vector<Tile*>>& _map, Tile& _start)
 {
 	//The list we will be iterating on
         std::vector<Tile*> openSet;
@@ -81,7 +82,7 @@ std::vector<Tile*>* PathFinding::GetMoveArea(std::vector<std::vector<Tile*>>& _m
 
 		openSet.push_back(&_start);
 
-        int movesLeft = _moves;
+        int movesLeft = _start.GetUnitOnTile()->GetStat(UnitStat::MOVEMENT);
         do
         {
             for (int i = 0; i < openSet.size(); ++i)

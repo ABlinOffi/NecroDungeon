@@ -25,7 +25,7 @@ static class PathFinding
 {
 public:
 	static std::vector<Tile*>* GetPath(std::vector<std::vector<Tile*>>& _map, Tile& _start, Tile& _end);
-	static std::vector<Tile*>* GetMoveArea(std::vector<std::vector<Tile*>>& _map, Tile& _start, int _moves);
+	static std::vector<Tile*>* GetMoveArea(std::vector<std::vector<Tile*>>& _map, Tile& _start);
 
 private:
 	static std::vector<Tile*>* ReconstructPath(std::map<Tile*, Tile*>& _cameFrom, Tile& _current);

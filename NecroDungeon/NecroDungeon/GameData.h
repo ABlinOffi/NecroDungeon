@@ -5,6 +5,7 @@
 class Map;
 class InputManager;
 class CombatManager;
+class Unit;
 
 class GameData
 {
@@ -34,4 +35,7 @@ private:
     float dt;
     InputManager* inputs;
     CombatManager* combatManager;
+
+    //Test
+    Unit* unit;
 };
